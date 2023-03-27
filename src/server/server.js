@@ -150,6 +150,8 @@ function defineSocketEvents(socket) {
 
             data.date = Date.now();
             data.type = "msg";
+            console.log(data);// to show encrupted data
+
             // When the server receives a message, it sends it to the all clients, so also to sender
             chat.sockets.in(channel.name).emit('receive', data);
             msg.push(data);

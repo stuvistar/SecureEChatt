@@ -385,6 +385,7 @@ function appendMessage(data) {
 	// get this channel symmetric key to decrypt message
 	var symmetricKey = getChannels()[currentChannelName].channelKey;
 	var msg = data.msg.symDecrypt(symmetricKey)
+	console.log(msg); // To show in console, inspect
 
 	// add to self screen
 	var messagesScreen = $(".messages");
